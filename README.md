@@ -1,5 +1,11 @@
 # 自動化更新 TFT 職缺小站小工具
 
+## 功能介紹
+
+能自動爬蟲獲得各公司現有職缺，並透過 chatGPT 統整，並將資訊更新至此 google sheet 上面
+
+---
+
 ## 操作方式
 
 _給不會程式的你：_
@@ -30,10 +36,12 @@ clone 此專案到你的電腦
 
 可直接在表格中插入新公司，需注意職缺連結該欄位必須填寫「公司頁面」的網址，範例：https://www.104.com.tw/company/{公司id}
 
-![image info]("https://i.imgur.com/T9m3Zm1.png)
-要複製此頁面的網址
+![image info](https://i.imgur.com/wkB6D0W.png)
+需至此頁面複製網址
 
 ### 啟動方式
+
+開啟 terminal
 
 ---
 

@@ -11,7 +11,7 @@ def getCompanyId(url):
 
 
 def write_into_sheet():
-    auth_file = "openai-access-key.json"
+    auth_file = "google-sheet-access-key.json"
     gc = pygsheets.authorize(service_file=auth_file)
     sheet_url = "https://docs.google.com/spreadsheets/d/11DP1bPkGvImaAAi6lVFcXyZGWdMdEJy-7OTyXUXX3_s"
     global_sheet = gc.open_by_url(sheet_url)
@@ -40,7 +40,9 @@ def write_into_sheet():
 
 
 def concludeChatGPT(jobs):
-    api_key = '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'
+    #open text file in read mode
+    api_file = open("open-ai-access-key.txt", "r")
+    api_key = api_file.read().rstrip()
     prompt = '請將下述職業\n\n' + '\n'.join([x.text for x in jobs]) + '\n\n歸納成五項職業，越精簡越好'
 
     response = requests.post(
@@ -76,6 +78,5 @@ def concludeChatGPT(jobs):
 
 #     def insert(self, insert_rows = 1, values = []): # insert_rows = 1, start from 2
 #         self.working_sheet.insert_rows(insert_rows, number=1, values=values)
-
-
+    
 write_into_sheet()
