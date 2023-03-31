@@ -26,7 +26,7 @@ clone 此專案到你的電腦
 ## 注意事項
 
 下載完檔案之後請至 open ai 獲得自己的 access code 然後將之放在專案資料夾內
-，再將該檔案改名為：openai-access-key.json
+，再將該檔案改名為：openai-access-key.txt
 
 ---
 
